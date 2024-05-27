@@ -1,4 +1,5 @@
 <?php
+
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
@@ -18,29 +19,6 @@ function init_autoload()
     require_once(__DIR__ . '/vendor/autoload.php');
     \Carbon_Fields\Carbon_Fields::boot();
 }
-
-
-function init_enqueue_scripts()
-{
-    wp_enqueue_style('itha-style', get_template_directory_uri() . '/styles/style.css');
-    wp_enqueue_script('itha-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true);
-
-    wp_localize_script('itha-scripts', 'wp_variables', array(
-        'ajax' => admin_url('admin-ajax.php'),
-        'site_url' => site_url(),
-        'site_assets' => get_template_directory_uri(),
-        'is_mobile' => wp_is_mobile(),
-        'contacts' => [
-            'whatsapp' => get_theme_option('contacts_whatsapp') ?? '#',
-            'telegram' => get_theme_option('contacts_telegram') ?? '#',
-            'vkontakte' => get_theme_option('contacts_vk') ?? '#',
-            'instagram' => get_theme_option('contacts_instagram') ?? '#',
-            'phone' => get_theme_option('contacts_phone') ?? '#',
-        ],
-    ));
-}
-
-add_action('wp_enqueue_scripts', 'init_enqueue_scripts');
 
 register_nav_menu('header-menu', __('Шапка'));
 register_nav_menu('footer-menu', __('Подвал'));
