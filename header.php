@@ -28,7 +28,7 @@
 <main class="page-wrapper">
     <!-- Navbar -->
     <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-    <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+    <header class="<?= $args['headerClass'] ?? 'header navbar navbar-expand-lg position-absolute navbar-sticky' ?>">
         <div class="container px-3">
             <a href="/" class="navbar-brand pe-3">
                 <img src="<?= get_template_directory_uri() ?>/assets/svg/logo.svg" width="47" alt="Silicon">
@@ -45,18 +45,25 @@
                             <a href="/" class="nav-link">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://silicon.createx.studio/components/typography.html" class="nav-link">Проекты</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://silicon.createx.studio/docs/getting-started.html" class="nav-link">Блог</a>
+                            <a href="<?= esc_url(get_post_type_archive_link('projects')) ?>" class="nav-link">Проекты</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-                <input type="checkbox" class="form-check-input" id="theme-mode">
-                <label class="form-check-label d-none d-sm-block" for="theme-mode">Светлая</label>
-                <label class="form-check-label d-none d-sm-block" for="theme-mode">Темная</label>
-            </div>
+            <?php if (isset($args['isDarkBg']) && $args['isDarkBg']) : ?>
+                <div class="pe-lg-1 ms-auto me-4" data-bs-theme="dark">
+                    <div class="form-check form-switch mode-switch" data-bs-toggle="mode">
+                        <input type="checkbox" class="form-check-input" id="theme-mode">
+                        <label class="form-check-label d-none d-sm-block" for="theme-mode">Светлая</label>
+                        <label class="form-check-label d-none d-sm-block" for="theme-mode">Темная</label>
+                    </div>
+                </div>
+            <?php else : ?>
+                <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+                    <input type="checkbox" class="form-check-input" id="theme-mode">
+                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Светлая</label>
+                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Темная</label>
+                </div>
+            <?php endif; ?>
         </div>
     </header>
