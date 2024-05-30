@@ -31,8 +31,11 @@
     <header class="<?= $args['headerClass'] ?? 'header navbar navbar-expand-lg position-absolute navbar-sticky' ?>">
         <div class="container px-3">
             <a href="/" class="navbar-brand pe-3">
-                <img src="<?= get_template_directory_uri() ?>/assets/svg/logo.svg" width="47" alt="Silicon">
-                Kinza
+                <img
+                    src="<?= get_template_directory_uri() ?>/assets/images/logo/<?= (isset($args['isDarkBg']) && $args['isDarkBg']) ? 'white-logo.png' : 'black-logo.png' ?>"
+                    width="120"
+                    alt="Kinza"
+                >
             </a>
             <div id="navbarNav" class="offcanvas offcanvas-end">
                 <div class="offcanvas-header border-bottom">

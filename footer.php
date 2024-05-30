@@ -8,8 +8,7 @@
         <div class="row pb-5">
             <div class="col-lg-4 col-md-6">
                 <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-                    <img src="<?= get_template_directory_uri() ?>/assets/svg/logo.svg" width="47" alt="Silicon">
-                    Kinza
+                    <img src="<?= get_template_directory_uri() ?>/assets/images/logo/black-logo.png" width="120" alt="Kinza">
                 </div>
                 <p class="fs-sm pb-lg-3 mb-4">Подпишитесь на нашу рассылку и получайте свежие новости о наших проектах, эксклюзивные предложения и многое другое. Оставайтесь на связи и будьте в числе первых, кто узнает обо всем самом важном!</p>
                 <form class="needs-validation" novalidate="">
