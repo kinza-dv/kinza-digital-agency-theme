@@ -20,7 +20,7 @@
                         Мы <span class="text-gradient-primary">воплощаем</span> Ваши идеи в реальность
                     </h1>
                     <div class="d-md-flex align-items-md-start">
-                        <a href="https://silicon.createx.studio/contacts-v1.html" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Написать нам</a>
+                        <a href="<?= get_permalink(get_page_by_path('contacts')->ID) ?>" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Написать нам</a>
                         <p class="d-lg-block d-none mb-0 ps-md-3">Kinza - IT-компания из Хабаровска. Мы создаем мобильные приложения и веб-сайты, которые ценят по всему миру.</p>
                     </div>
                 </div>
@@ -407,9 +407,12 @@
             <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(<?= get_template_directory_uri() ?>/assets/images/contact-bg.png);">
                 <div class="py-md-5 py-4 text-center">
                     <h3 class="h4 fw-normal text-light opacity-75">Хотите работать с нами? Давайте поговорим</h3>
-                    <a href="mailto:email@example.com" class="display-6 text-light">info@kinza.ru</a>
+                    <a href="mailto:kinza-agency@ya.ru" class="display-6 text-light">kinza-agency@ya.ru</a>
                     <div class="pt-md-5 pt-4 pb-md-2">
-                        <a href="https://silicon.createx.studio/contacts-v1.html" class="btn btn-lg btn-light">Написать нам</a>
+                        <a
+                            href="<?= get_permalink(get_page_by_path('contacts')->ID) ?>"
+                            class="btn btn-lg btn-light"
+                        >Написать нам</a>
                     </div>
                 </div>
             </div>

@@ -44,7 +44,7 @@
                     }
 
                     // Разметка для разных размеров
-                    $is_wide = $count === 2 || $count === 3; // Для второго и четвертого элемента
+                    $is_wide = $count === 2 || $count === 3;
                     $col_class = $is_wide ? 'col-md-7' : 'col-md-5';
                     ?>
 
@@ -93,7 +93,7 @@
                     <div class="pt-5 pb-3 pb-md-5 px-4 px-lg-0 text-center text-md-start">
                         <p class="lead mb-3">Готовы приступить к работе?</p>
                         <h2 class="h1 pb-3 pb-sm-4">Выведите свой <span class="text-primary">бизнес</span> на новый уровень</h2>
-                        <a href="#" class="btn btn-primary btn-lg">Работать с нами</a>
+                        <a href="<?= get_permalink(get_page_by_path('contacts')->ID) ?>" class="btn btn-primary btn-lg">Работать с нами</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-7 offset-xl-1">

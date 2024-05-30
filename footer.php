@@ -13,12 +13,12 @@
                 </div>
                 <p class="fs-sm pb-lg-3 mb-4">Подпишитесь на нашу рассылку и получайте свежие новости о наших проектах, эксклюзивные предложения и многое другое. Оставайтесь на связи и будьте в числе первых, кто узнает обо всем самом важном!</p>
                 <form class="needs-validation" novalidate="">
-                    <label for="subscr-email" class="form-label">Subscribe to our newsletter</label>
+                    <label for="subscr-email" class="form-label">Подписывайтесь на нашу новостную рассылку</label>
                     <div class="input-group">
-                        <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required="">
+                        <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Ваш email" required="">
                         <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
-                        <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                        <div class="invalid-tooltip position-absolute top-100 start-0">Введите адрес электронной почты.</div>
+                        <button type="submit" class="btn btn-primary">Подписаться</button>
                     </div>
                 </form>
             </div>
@@ -30,6 +30,7 @@
                             <ul class="nav flex-column pb-lg-1 mb-lg-3">
                                 <li class="nav-item"><a href="/" class="nav-link d-inline-block px-0 pt-1 pb-2">Главная</a></li>
                                 <li class="nav-item"><a href="<?= esc_url(get_post_type_archive_link('projects')) ?>" class="nav-link d-inline-block px-0 pt-1 pb-2">Проекты</a></li>
+                                <li class="nav-item"><a href="<?= get_permalink(get_page_by_path('contacts')->ID) ?>" class="nav-link d-inline-block px-0 pt-1 pb-2">Контакты</a></li>
                             </ul>
                             <ul class="nav flex-column mb-2 mb-lg-0">
                                 <li class="nav-item"><a href="/" class="nav-link d-inline-block px-0 pt-1 pb-2">Условия использования</a></li>
@@ -47,7 +48,7 @@
                     </div>
                     <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
                         <h6 class="mb-2">Связаться с нами</h6>
-                        <a href="mailto:email@example.com" class="fw-medium">email@example.com</a>
+                        <a href="mailto:kinza-agency@ya.ru" class="fw-medium">kinza-agency@ya.ru</a>
                     </div>
                 </div>
             </div>
