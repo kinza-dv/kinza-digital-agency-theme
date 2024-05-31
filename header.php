@@ -32,7 +32,7 @@
         <div class="container px-3">
             <a href="/" class="navbar-brand pe-3">
                 <img
-                    src="<?= get_template_directory_uri() ?>/assets/images/logo/<?= (isset($args['isDarkBg']) && $args['isDarkBg']) ? 'white-logo.png' : 'black-logo.png' ?>"
+                    src="<?= get_template_directory_uri() ?>/assets/images/logo/logo.png"
                     width="120"
                     alt="Kinza"
                 >
