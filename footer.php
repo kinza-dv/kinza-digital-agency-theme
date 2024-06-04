@@ -6,55 +6,47 @@
 <footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
     <div class="container pt-lg-4">
         <div class="row pb-5">
-            <div class="col-lg-4 col-md-6">
+            <div class="col-md-2 col-12">
                 <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-                    <img src="<?= get_template_directory_uri() ?>/assets/images/logo/black-logo.png" width="120" alt="Kinza">
+                    <img src="<?= get_template_directory_uri() ?>/assets/images/logo/logo.png" width="120" alt="Kinza">
                 </div>
-                <p class="fs-sm pb-lg-3 mb-4">Подпишитесь на нашу рассылку и получайте свежие новости о наших проектах, эксклюзивные предложения и многое другое. Оставайтесь на связи и будьте в числе первых, кто узнает обо всем самом важном!</p>
-                <form class="needs-validation" novalidate="">
-                    <label for="subscr-email" class="form-label">Подписывайтесь на нашу новостную рассылку</label>
-                    <div class="input-group">
-                        <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Ваш email" required="">
-                        <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
-                        <div class="invalid-tooltip position-absolute top-100 start-0">Введите адрес электронной почты.</div>
-                        <button type="submit" class="btn btn-primary">Подписаться</button>
-                    </div>
-                </form>
             </div>
-            <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+            <div class="col-md-9 col-12 offset-lg-1 offset-md-1 pt-4 pt-md-0">
                 <div id="footer-links" class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6 col-12">
                         <h6 class="mb-2">Полезные ссылки</h6>
-                        <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                        <div id="useful-links" data-bs-parent="#footer-links">
                             <ul class="nav flex-column pb-lg-1 mb-lg-3">
                                 <li class="nav-item"><a href="/" class="nav-link d-inline-block px-0 pt-1 pb-2">Главная</a></li>
                                 <li class="nav-item"><a href="<?= esc_url(get_post_type_archive_link('projects')) ?>" class="nav-link d-inline-block px-0 pt-1 pb-2">Проекты</a></li>
                                 <li class="nav-item"><a href="<?= get_permalink(get_page_by_path('contacts')->ID) ?>" class="nav-link d-inline-block px-0 pt-1 pb-2">Контакты</a></li>
                             </ul>
-                            <ul class="nav flex-column mb-2 mb-lg-0">
-                                <li class="nav-item"><a href="/" class="nav-link d-inline-block px-0 pt-1 pb-2">Условия использования</a></li>
-                                <li class="nav-item"><a href="/" class="nav-link d-inline-block px-0 pt-1 pb-2">Политика конфиденциальности</a></li>
-                            </ul>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-3">
+                    <div class="col-lg-4 col-md-6 col-12 pt-2 pt-md-0">
                         <h6 class="mb-2">Социальные сети</h6>
-                        <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                        <div id="social-links" data-bs-parent="#footer-links">
                             <ul class="nav flex-column mb-2 mb-lg-0">
                                 <li class="nav-item"><a href="https://vk.com/club224388965" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">ВКонтакте</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                    <div class="col-lg-4 col-md-6 col-12 pt-2 pt-lg-0">
                         <h6 class="mb-2">Связаться с нами</h6>
-                        <a href="mailto:kinza-agency@ya.ru" class="fw-medium">kinza-agency@ya.ru</a>
+                        <a href="mailto:kinza-agency@ya.ru" class="nav-link text-decoration-underline fw-medium">kinza-agency@ya.ru</a>
                     </div>
                 </div>
             </div>
         </div>
-        <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
-            © Kinza 2024.
-        </p>
+        <div class="row d-flex pb-2 pb-lg-0 mb-0 align-items-center">
+            <div class="col-lg-2 col-md-12">
+                <p class="d-block fs-xs text-md-start m-0">© Kinza 2024.</p>
+            </div>
+            <div class="col-lg-9 col-md-12 offset-lg-1 offset-md-0 d-lg-flex gap-3">
+                <a href="/" class="nav-link fs-xs text-center text-md-start">Условия использования</a>
+                <a href="/" class="nav-link fs-xs text-center text-md-start">Политика конфиденциальности</a>
+            </div>
+        </div>
     </div>
 </footer>
 

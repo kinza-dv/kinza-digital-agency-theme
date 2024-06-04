@@ -8,12 +8,12 @@
                 <div class="mb-md-5 pb-xl-5 mb-4">
 
                     <!-- Video popup btn -->
-<!--                    <div class="d-inline-flex align-items-center position-relative mb-3">-->
-<!--                        <a href="https://www.youtube.com/watch?v=zPo5ZaH6sW8" class="btn btn-video btn-icon btn-lg flex-shrink-0 me-3 stretched-link" data-bs-toggle="video" aria-label="Play video" data-lg-id="fbf85286-f9c5-4317-a7f4-80f74384219e">-->
-<!--                            <i class="bx bx-play"></i>-->
-<!--                        </a>-->
-<!--                        <h4 class="mb-0">Презентация</h4>-->
-<!--                    </div>-->
+                    <div class="d-inline-flex align-items-center position-relative mb-3">
+                        <a href="https://www.youtube.com/watch?v=zPo5ZaH6sW8" class="btn btn-video btn-icon btn-lg flex-shrink-0 me-3 stretched-link" data-bs-toggle="video" aria-label="Play video" data-lg-id="fbf85286-f9c5-4317-a7f4-80f74384219e">
+                            <i class="bx bx-play"></i>
+                        </a>
+                        <h4 class="mb-0">Презентация</h4>
+                    </div>
 
                     <!-- Text -->
                     <h1 class="display-2 mb-md-5 mb-3 pb-3">
@@ -49,7 +49,10 @@
             </div>
         </div>
     </div>
-    <div id="jarallax-container-0" class="jarallax-container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100; clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);"><div style="background-position: 0% 100%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;https://silicon.createx.studio/assets/img/landing/digital-agency/hero-bg.svg&quot;); position: fixed; top: 0px; left: 0px; width: 1855px; height: 964px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; margin-top: 0px; transform: translate3d(0px, 0px, 0px);"></div></div></section>
+    <div id="jarallax-container-0" class="jarallax-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -100; clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);">
+        <div style="background-position: 0% 100%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;<?= get_template_directory_uri() ?>/assets/svg/hero-bg.svg&quot;); position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; margin-top: 0; transform: translate3d(0px, 0px, 0px);"></div>
+    </div>
+</section>
 
 
 <!-- Benefits (features) -->
@@ -145,8 +148,8 @@
                 }
 
                 if ($count == 1) : ?>
-                    <div class="masonry-grid-item col-md-4 col-sm-6 col-12 shuffle-item shuffle-item--visible" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <a href="<?php the_permalink(); ?>" class="card card-portfolio card-hover bg-transparent border-0">
+                    <div class="masonry-grid-item col-md-4 col-sm-6 col-12 shuffle-item shuffle-item--visible" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity; height: 700px">
+                        <a href="<?php the_permalink(); ?>" class="card card-portfolio card-hover bg-transparent border-0 h-100">
                             <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
                                 <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></span>
                                 <div class="position-relative zindex-2">
@@ -154,14 +157,14 @@
                                     <span class="fs-sm text-light opacity-70"><?= esc_html($term_list); ?></span>
                                 </div>
                             </div>
-                            <div class="card-img">
-                                <img src="<?= esc_url($image_url); ?>" class="rounded-3" alt="<?php the_title_attribute(); ?>">
+                            <div class="card-img h-100">
+                                <img src="<?= esc_url($image_url); ?>" class="rounded-3 h-100 object-fit-cover" alt="<?php the_title_attribute(); ?>">
                             </div>
                         </a>
                     </div>
                 <?php elseif ($count == 2) : ?>
-                    <div class="masonry-grid-item col-md-4 col-sm-6 col-12 shuffle-item shuffle-item--visible" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(440px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <a href="<?php the_permalink(); ?>" class="card card-portfolio card-hover bg-transparent border-0">
+                    <div class="masonry-grid-item col-md-4 col-sm-6 col-12 shuffle-item shuffle-item--visible" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(440px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity; height: calc(350px - var(--si-gutter-x) * .5)">
+                        <a href="<?php the_permalink(); ?>" class="card card-portfolio card-hover bg-transparent border-0 h-100">
                             <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
                                 <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></span>
                                 <div class="position-relative zindex-2">
@@ -169,14 +172,14 @@
                                     <span class="fs-sm text-light opacity-70"><?= esc_html($term_list); ?></span>
                                 </div>
                             </div>
-                            <div class="card-img">
-                                <img src="<?= esc_url($image_url); ?>" class="rounded-3" alt="<?php the_title_attribute(); ?>">
+                            <div class="card-img h-100">
+                                <img src="<?= esc_url($image_url); ?>" class="rounded-3 h-100 object-fit-cover" alt="<?php the_title_attribute(); ?>">
                             </div>
                         </a>
                     </div>
                 <?php elseif ($count == 3) : ?>
-                    <div class="masonry-grid-item col-md-4 col-sm-6 col-12 shuffle-item shuffle-item--visible" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(880px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <a href="<?php the_permalink(); ?>" class="card card-portfolio card-hover bg-transparent border-0">
+                    <div class="masonry-grid-item col-md-4 col-sm-6 col-12 shuffle-item shuffle-item--visible" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(880px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity; height: calc(350px - var(--si-gutter-x) * .5)">
+                        <a href="<?php the_permalink(); ?>" class="card card-portfolio card-hover bg-transparent border-0 h-100">
                             <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
                                 <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></span>
                                 <div class="position-relative zindex-2">
@@ -184,14 +187,14 @@
                                     <span class="fs-sm text-light opacity-70"><?= esc_html($term_list); ?></span>
                                 </div>
                             </div>
-                            <div class="card-img">
-                                <img src="<?= esc_url($image_url); ?>" class="rounded-3" alt="<?php the_title_attribute(); ?>">
+                            <div class="card-img h-100">
+                                <img src="<?= esc_url($image_url); ?>" class="rounded-3 h-100 object-fit-cover" alt="<?php the_title_attribute(); ?>">
                             </div>
                         </a>
                     </div>
                 <?php elseif ($count == 4) : ?>
-                    <div class="masonry-grid-item col-md-8 col-12 shuffle-item shuffle-item--visible" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(440px, 440px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <a href="<?php the_permalink(); ?>" class="card card-portfolio card-hover bg-transparent border-0">
+                    <div class="masonry-grid-item col-md-8 col-12 shuffle-item shuffle-item--visible" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(440px, 440px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity; height: calc(350px - var(--si-gutter-x) * .5)">
+                        <a href="<?php the_permalink(); ?>" class="card card-portfolio card-hover bg-transparent border-0 h-100 w-100">
                             <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
                                 <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></span>
                                 <div class="position-relative zindex-2">
@@ -199,8 +202,8 @@
                                     <span class="fs-sm text-light opacity-70"><?= esc_html($term_list); ?></span>
                                 </div>
                             </div>
-                            <div class="card-img">
-                                <img src="<?= esc_url($image_url); ?>" class="rounded-3" alt="<?php the_title_attribute(); ?>">
+                            <div class="card-img h-100 w-100">
+                                <img src="<?= esc_url($image_url); ?>" class="rounded-3 h-100 w-100 object-fit-cover" alt="<?php the_title_attribute(); ?>">
                             </div>
                         </a>
                     </div>

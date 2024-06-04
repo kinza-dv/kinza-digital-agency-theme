@@ -97,7 +97,7 @@
                                 <div class="card card-portfolio">
                                     <div class="card-img">
                                         <?php if (has_post_thumbnail()) : ?>
-                                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>">
+                                            <img class="w-100 object-fit-cover" style="height: 270px" src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>">
                                         <?php endif; ?>
                                     </div>
                                     <div class="card-body">
@@ -123,7 +123,7 @@
                                 <div class="card card-portfolio">
                                     <div class="card-img">
                                         <?php if (has_post_thumbnail()) : ?>
-                                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>">
+                                            <img class="w-100 object-fit-cover" style="height: 270px" src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>">
                                         <?php endif; ?>
                                     </div>
                                     <div class="card-body">
@@ -149,7 +149,7 @@
                                 <div class="card card-portfolio">
                                     <div class="card-img">
                                         <?php if (has_post_thumbnail()) : ?>
-                                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>">
+                                            <img class="w-100 object-fit-cover" style="height: 270px" src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>">
                                         <?php endif; ?>
                                     </div>
                                     <div class="card-body">
