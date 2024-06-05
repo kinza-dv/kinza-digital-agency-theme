@@ -26,3 +26,10 @@ register_nav_menu('footer-menu', __('Подвал'));
 add_action('admin_menu', function() {
     remove_menu_page('edit.php');
 });
+
+function init_enqueue_scripts(): void
+{
+  wp_enqueue_style('kinza-style', get_template_directory_uri() . '/styles/style.css');
+//  wp_enqueue_script('kinza-scripts', get_template_directory_uri() . '/js/scripts.js', [], '1.0.1', true);
+}
+add_action('wp_enqueue_scripts', 'init_enqueue_scripts');

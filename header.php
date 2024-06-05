@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="разработка сайтов Хабаровск, IT-компания Хабаровск, создание сайтов Кинза, веб-разработка Kinza, сайты на заказ Хабаровск, услуги веб-разработки Хабаровск, Кинза разработка сайтов, Kinza IT-компания, кастомная веб-разработка Хабаровск, корпоративные сайты Хабаровск, профессиональная веб-разработка Хабаровск, разработка бизнес-сайтов Хабаровск, веб-разработка для стартапов Хабаровск, создание сайтов на заказ Кинза, комплексные решения для веб-разработки Хабаровск">
 
     <!-- Theme switcher (color modes) -->
     <script async="" src="<?= get_template_directory_uri() ?>/assets/scripts/gtm.js"></script>
@@ -23,11 +24,7 @@
 
 <body <?php body_class(); ?>>
 
-<!-- Page wrapper for sticky footer -->
-<!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
 <main class="page-wrapper">
-    <!-- Navbar -->
-    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
     <header class="<?= $args['headerClass'] ?? 'header navbar navbar-expand-lg position-absolute navbar-sticky' ?>">
         <div class="container px-3">
             <a href="/" class="navbar-brand pe-3">
