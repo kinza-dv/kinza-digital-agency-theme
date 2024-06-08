@@ -32,25 +32,24 @@
 
     <?php
 
-    // Получаем URL картинки
     $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-    // Если нет картинки, используем картинку по умолчанию
     if (!$image_url) {
         $image_url = get_template_directory_uri() . '/assets/images/default.jpg';
     }
 
     ?>
 
-    <section class="jarallax" data-jarallax="" data-speed="0.4">
-
-        <div class="d-none d-xxl-block" style="height: 800px;"></div>
-        <div class="d-none d-lg-block d-xxl-none" style="height: 600px;"></div>
-        <div class="d-none d-md-block d-lg-none" style="height: 450px;"></div>
-        <div class="d-md-none" style="height: 400px;"></div>
-        <div id="jarallax-container-0" class="jarallax-container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100; clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);">
-            <div class="jarallax-img" style="background-image: url(<?= $image_url ?>); object-fit: cover; object-position: 50% 50%; max-width: none; position: fixed; top: 0px; left: 0px; width: 1367px; height: 818.4px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; margin-top: 72.8px; transform: translate3d(0px, 48.7937px, 0px);" data-jarallax-original-styles="background-image: url(<?= $image_url ?>);"></div>
-        </div>
-    </section>
+    <div class="container">
+        <section class="jarallax rounded overflow-hidden" data-jarallax="" data-speed="0.4">
+            <div class="d-none d-xxl-block" style="height: 500px;"></div>
+            <div class="d-none d-lg-block d-xxl-none" style="height: 600px;"></div>
+            <div class="d-none d-md-block d-lg-none" style="height: 450px;"></div>
+            <div class="d-md-none" style="height: 400px;"></div>
+            <div id="jarallax-container-0" class="jarallax-container">
+                <div class="jarallax-img" style="background-image: url(<?= $image_url ?>); object-fit: cover; object-position: 50% 50%; max-width: none; position: fixed; top: 0px; left: 0px;" data-jarallax-original-styles="background-image: url(<?= $image_url ?>);"></div>
+            </div>
+        </section>
+    </div>
 
     <?php the_content(); ?>
 
