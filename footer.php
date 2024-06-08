@@ -43,8 +43,7 @@
                 <p class="d-block fs-xs text-md-start m-0">© Kinza 2024.</p>
             </div>
             <div class="col-lg-9 col-md-12 offset-lg-1 offset-md-0 d-lg-flex gap-3">
-                <a href="/" class="nav-link fs-xs text-center text-md-start">Условия использования</a>
-                <a href="/" class="nav-link fs-xs text-center text-md-start">Политика конфиденциальности</a>
+                <a href="<?= esc_url(get_permalink(get_page_by_path('privacy-policy'))) ?>" class="nav-link fs-xs text-center text-md-start">Политика конфиденциальности</a>
             </div>
         </div>
     </div>
