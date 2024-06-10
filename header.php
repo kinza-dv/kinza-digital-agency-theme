@@ -29,10 +29,11 @@
         <div class="container px-3">
             <a href="/" class="navbar-brand pe-3">
                 <img
-                    src="<?= get_template_directory_uri() ?>/assets/images/logo/logo.png"
-                    width="120"
+                    src="<?= get_template_directory_uri() ?>/assets/images/logo/kinza-logo.svg"
+                    width="30"
                     alt="Kinza"
                 >
+                Kinza
             </a>
             <div id="navbarNav" class="offcanvas offcanvas-end">
                 <div class="offcanvas-header border-bottom">

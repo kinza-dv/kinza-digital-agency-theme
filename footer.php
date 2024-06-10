@@ -8,7 +8,8 @@
         <div class="row pb-5">
             <div class="col-md-2 col-12">
                 <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-                    <img src="<?= get_template_directory_uri() ?>/assets/images/logo/logo.png" width="120" alt="Kinza">
+                    <img src="<?= get_template_directory_uri() ?>/assets/images/logo/kinza-logo.svg" width="30" alt="Kinza">
+                    Kinza
                 </div>
             </div>
             <div class="col-md-9 col-12 offset-lg-1 offset-md-1 pt-4 pt-md-0">
