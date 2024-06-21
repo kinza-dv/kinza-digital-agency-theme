@@ -385,8 +385,8 @@
 $latest_news = get_latest_news();
 
 ?>
-<?php if (count($latest_news)) : ?>
 <div class="bg-secondary mb-5 pt-5">
+    <?php if (count($latest_news)) : ?>
     <section class="container mb-5 py-lg-5">
         <h2 class="h1 mb-4 pb-3 text-center">Новости</h2>
         <div class="row">
@@ -470,6 +470,7 @@ $latest_news = get_latest_news();
             </div>
         </div>
     </section>
+    <?php endif; ?>
 
     <section class="container pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px);">
         <div class="card border-0 bg-gradient-primary">
@@ -488,6 +489,5 @@ $latest_news = get_latest_news();
         </div>
     </section>
 </div>
-<?php endif; ?>
 
 <?php get_footer(); ?>
