@@ -97,6 +97,57 @@ function get_latest_news() {
             $categories = get_the_terms(get_the_ID(), 'news_category');
             $category_name = !empty($categories) ? $categories[0]->name : '';
 
+            // Получение текста статьи без тегов
+            $content = wp_strip_all_tags(get_the_content());
+
+            // Сбор данных о новости
+            $news_data[] = [
+                'title' => get_the_title(),
+                'image' => $thumbnail_url,
+                'category' => $category_name,
+                'date' => format_date(get_the_date('Y-m-d H:i:s')),
+                'link' => get_permalink(),
+                'content' => $content
+            ];
+        }
+
+        // Восстановление глобальной переменной $post
+        wp_reset_postdata();
+
+        return $news_data;
+    } else {
+        return [];
+    }
+}
+
+function get_random_news() {
+    // Параметры запроса
+    $args = [
+        'post_type' => 'news',
+        'posts_per_page' => 3,
+        'post_status' => 'publish',
+        'orderby' => 'rand'
+    ];
+
+    // Выполнение запроса
+    $random_news_query = new WP_Query($args);
+
+    // Проверка наличия новостей
+    if ($random_news_query->have_posts()) {
+        $news_data = [];
+
+        // Обработка результатов запроса
+        while ($random_news_query->have_posts()) {
+            $random_news_query->the_post();
+
+            // Получение изображения
+            $thumbnail_id = get_post_thumbnail_id();
+            $thumbnail_url = wp_get_attachment_image_url($thumbnail_id, 'full');
+
+            // Получение рубрик
+            $categories = get_the_terms(get_the_ID(), 'news_category');
+            $category_name = !empty($categories) ? $categories[0]->name : '';
+
             // Сбор данных о новости
             $news_data[] = [
                 'title' => get_the_title(),

@@ -7,7 +7,6 @@
             <div class="col-md-6 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
                 <div class="mb-md-5 pb-xl-5 mb-4">
 
-                    <!-- Video popup btn -->
                     <div class="d-inline-flex align-items-center position-relative mb-3">
                         <a href="https://www.youtube.com/watch?v=zPo5ZaH6sW8" class="btn btn-video btn-icon btn-lg flex-shrink-0 me-3 stretched-link" data-bs-toggle="video" aria-label="Play video" data-lg-id="fbf85286-f9c5-4317-a7f4-80f74384219e">
                             <i class="bx bx-play"></i>
@@ -15,7 +14,6 @@
                         <h4 class="mb-0">Презентация</h4>
                     </div>
 
-                    <!-- Text -->
                     <h1 class="display-2 mb-md-5 mb-3 pb-3">
                         Мы <span class="text-gradient-primary">воплощаем</span> Ваши идеи в реальность
                     </h1>
@@ -25,7 +23,6 @@
                     </div>
                 </div>
 
-                <!-- Scroll down btn -->
                 <div class="d-inline-flex align-items-center justify-content-center justify-content-md-start position-relative">
                     <a href="#benefits" data-scroll="" data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3" aria-label="Scroll for more">
                         <i class="bx bx-chevron-down"></i>
@@ -383,14 +380,13 @@
 </section>
 
 
-<!-- Blog + Contact cta -->
+<?php
+
+$latest_news = get_latest_news();
+
+?>
+<?php if (count($latest_news)) : ?>
 <div class="bg-secondary mb-5 pt-5">
-    <?php
-
-    $latest_news = get_latest_news();
-    echo '<script>console.log('.json_encode($latest_news).')</script>';
-
-    ?>
     <section class="container mb-5 py-lg-5">
         <h2 class="h1 mb-4 pb-3 text-center">Новости</h2>
         <div class="row">
@@ -408,25 +404,10 @@
                                 <?php endif; ?>
                                 <span class="fs-sm text-muted"><?= $latest_news[0]['date'] ?></span>
                             </div>
-                            <h3 class="h5 mb-0">
+                            <h3 class="h5 text-truncate">
                                 <a href="<?= $latest_news[0]['link'] ?>"><?= $latest_news[0]['title'] ?></a>
                             </h3>
-                        </div>
-                        <div class="card-footer py-4 d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-between">
-                            <div class="d-flex align-items-center mt-sm-0 mt-4 text-muted">
-                                <div class="d-flex align-items-center me-3">
-                                    <i class="bx bx-like fs-lg me-1"></i>
-                                    <span class="fs-sm">8</span>
-                                </div>
-                                <div class="d-flex align-items-center me-3">
-                                    <i class="bx bx-comment fs-lg me-1"></i>
-                                    <span class="fs-sm">7</span>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bx-share-alt fs-lg me-1"></i>
-                                    <span class="fs-sm">4</span>
-                                </div>
-                            </div>
+                            <p style="-webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;"><?= $latest_news[0]['content'] ?></p>
                         </div>
                     </article>
                 <?php endif; ?>
@@ -448,26 +429,10 @@
                                             <span class="fs-sm text-muted"><?= $latest_news[1]['date'] ?></span>
                                         <?php endif; ?>
                                     </div>
-                                    <h3 class="h5" style="height: 84px">
+                                    <h3 class="h5 text-truncate">
                                         <a href="<?= $latest_news[1]['link'] ?>"><?= $latest_news[1]['title'] ?></a>
                                     </h3>
-                                    <hr class="my-4">
-                                    <div class="d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-between">
-                                        <div class="d-flex align-items-center mt-sm-0 mt-4 text-muted">
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-like fs-lg me-1"></i>
-                                                <span class="fs-sm">8</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-comment fs-lg me-1"></i>
-                                                <span class="fs-sm">7</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                                <span class="fs-sm">4</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p style="-webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;"><?= $latest_news[1]['content'] ?></p>
                                 </div>
                             </div>
                         </div>
@@ -490,26 +455,10 @@
                                             <span class="fs-sm text-muted"><?= $latest_news[2]['date'] ?></span>
                                         <?php endif; ?>
                                     </div>
-                                    <h3 class="h5" style="height: 84px">
+                                    <h3 class="h5 text-truncate">
                                         <a href="<?= $latest_news[2]['link'] ?>"><?= $latest_news[2]['title'] ?></a>
                                     </h3>
-                                    <hr class="my-4">
-                                    <div class="d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-between">
-                                        <div class="d-flex align-items-center mt-sm-0 mt-4 text-muted">
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-like fs-lg me-1"></i>
-                                                <span class="fs-sm">8</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-comment fs-lg me-1"></i>
-                                                <span class="fs-sm">7</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                                <span class="fs-sm">4</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p style="-webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;"><?= $latest_news[2]['content'] ?></p>
                                 </div>
                             </div>
                         </div>
@@ -539,5 +488,6 @@
         </div>
     </section>
 </div>
+<?php endif; ?>
 
 <?php get_footer(); ?>
