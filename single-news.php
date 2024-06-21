@@ -61,10 +61,31 @@ if (!$image_url) {
 
 <?php
 
+function get_reading_time_label($minutes) {
+    $last_digit = $minutes % 10;
+    $last_two_digits = $minutes % 100;
+
+    if ($last_two_digits >= 11 && $last_two_digits <= 19) {
+        return 'минут';
+    }
+
+    switch ($last_digit) {
+        case 1:
+            return 'минута';
+        case 2:
+        case 3:
+        case 4:
+            return 'минуты';
+        default:
+            return 'минут';
+    }
+}
+
 $content = get_the_content();
 $word_count = count(explode(' ', strip_tags($content)));
 $reading_speed = 200;
 $reading_time = max(1, ceil($word_count / $reading_speed));
+$reading_time_label = get_reading_time_label($reading_time);
 
 $post_url = get_permalink();
 
@@ -78,16 +99,16 @@ $post_url = get_permalink();
 
         <div class="col-lg-3 position-relative">
             <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important;">
-                <span class="d-block mb-3">Время чтения <?= $reading_time ?> минут</span>
+                <span class="d-block mb-3">Время чтения <?= $reading_time ?> <?= $reading_time_label ?></span>
                 <h6>Поделитесь этой новостью:</h6>
                 <div>
                     <a href="https://vk.com/share.php?url=<?= urlencode($post_url); ?>" target="_blank" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="VK">
                         <i class="bx bxl-vk"></i>
                     </a>
-                    <a href="https://t.me/share/url?url=<?php echo urlencode($post_url); ?>" target="_blank" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="Telegram">
+                    <a href="https://t.me/share/url?url=<?= urlencode($post_url); ?>" target="_blank" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="Telegram">
                         <i class="bx bxl-telegram"></i>
                     </a>
-                    <a href="https://www.instagram.com/?url=<?php echo urlencode($post_url); ?>" target="_blank" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="Instagram">
+                    <a href="https://www.instagram.com/?url=<?= urlencode($post_url); ?>" target="_blank" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="Instagram">
                         <i class="bx bxl-instagram"></i>
                     </a>
                 </div>
