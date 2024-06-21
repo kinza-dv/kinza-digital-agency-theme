@@ -10,7 +10,6 @@ add_action('wp_head', 'add_projects_archive_meta_description');
 ?>
 
 <?php get_header(null, ['headerClass' => 'header navbar navbar-expand-lg bg-light navbar-sticky']); ?>
-    <!-- Breadcrumb -->
     <nav class="container py-4 mb-lg-2 mt-lg-3" aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item">
@@ -20,8 +19,6 @@ add_action('wp_head', 'add_projects_archive_meta_description');
         </ol>
     </nav>
 
-
-    <!-- Page title + Filters -->
     <section class="container d-md-flex align-items-center justify-content-between pb-3">
         <h1 class="text-nowrap mb-md-4 pe-md-5">Проекты</h1>
     </section>
@@ -82,21 +79,19 @@ add_action('wp_head', 'add_projects_archive_meta_description');
             <?php endif; ?>
         </div>
 
-        <!-- Pagination -->
         <nav aria-label="Page navigation example">
             <?php
-            // Пагинация
-            the_posts_pagination(array(
+
+            the_posts_pagination([
                 'mid_size'  => 2,
                 'prev_text' => '<i class="bx bx-chevron-left mx-n1"></i>',
                 'next_text' => '<i class="bx bx-chevron-right mx-n1"></i>',
-            ));
+            ]);
+
             ?>
         </nav>
     </section>
 
-
-    <!-- Contact CTA -->
     <section class="container mb-1 mb-md-3 mb-lg-4">
         <div class="bg-secondary rounded-3 overflow-hidden">
             <div class="row align-items-center">

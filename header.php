@@ -49,6 +49,9 @@
                             <a href="<?= esc_url(get_post_type_archive_link('projects')) ?>" class="nav-link">Проекты</a>
                         </li>
                         <li class="nav-item">
+                            <a href="<?= esc_url(get_post_type_archive_link('news')) ?>" class="nav-link">Новости</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="<?= get_permalink(get_page_by_path('contacts')->ID) ?>" class="nav-link">Контакты</a>
                         </li>
                     </ul>
