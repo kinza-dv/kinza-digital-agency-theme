@@ -1,14 +1,3 @@
-<?php
-
-function add_projects_archive_meta_description() {
-    if (is_post_type_archive('projects')) {
-        echo '<meta name="description" content="Проекты IT компании Kinza из Хабаровска. Мы занимаемся разработкой сайтов, веб-приложений, мобильных приложений и программного обеспечения. Посмотрите наши успешные проекты и узнайте больше о наших возможностях." />';
-    }
-}
-add_action('wp_head', 'add_projects_archive_meta_description');
-
-?>
-
 <?php get_header(null, ['headerClass' => 'header navbar navbar-expand-lg bg-light navbar-sticky']); ?>
     <nav class="container py-4 mb-lg-2 mt-lg-3" aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
