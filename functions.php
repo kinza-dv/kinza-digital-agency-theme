@@ -35,6 +35,21 @@ function init_enqueue_scripts(): void
 add_action('wp_enqueue_scripts', 'init_enqueue_scripts');
 
 function format_date($date) {
+    $months = array(
+        'Jan' => 'января',
+        'Feb' => 'февраля',
+        'Mar' => 'марта',
+        'Apr' => 'апреля',
+        'May' => 'мая',
+        'Jun' => 'июня',
+        'Jul' => 'июля',
+        'Aug' => 'августа',
+        'Sep' => 'сентября',
+        'Oct' => 'октября',
+        'Nov' => 'ноября',
+        'Dec' => 'декабря'
+    );
+
     $time = strtotime($date);
     $current_time = time();
     $diff = $current_time - $time;
@@ -53,9 +68,11 @@ function format_date($date) {
             return 'вчера в ' . date('H:i', $time);
         } else {
             if (date('Y', $time) == date('Y')) {
-                return date('d M в H:i', $time);
+                $month = $months[date('M', $time)];
+                return date('d', $time) . ' ' . $month . ' в ' . date('H:i', $time);
             } else {
-                return date('d M Y', $time);
+                $month = $months[date('M', $time)];
+                return date('d', $time) . ' ' . $month . ' ' . date('Y', $time);
             }
         }
     }
