@@ -397,22 +397,22 @@ $latest_news = get_latest_news();
                             <a href="<?= $latest_news[0]['link'] ?>" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
                             <img src="<?= $latest_news[0]['image'] ?>" class="card-img-top w-100 h-100 object-fit-cover" alt="Image">
                         </div>
-                        <div class="card-body pb-4">
+                        <div class="card-body pb-4 d-flex flex-column">
                             <div class="d-flex align-items-center justify-content-between mb-3">
                                 <?php if (!empty($latest_news[0]['category'])): ?>
                                     <a href="<?= $latest_news[0]['link'] ?>" class="badge fs-sm text-nav bg-secondary text-decoration-none"><?= $latest_news[0]['category'] ?></a>
                                 <?php endif; ?>
                                 <span class="fs-sm text-muted"><?= $latest_news[0]['date'] ?></span>
                             </div>
-                            <h3 class="h5 text-truncate">
-                                <a href="<?= $latest_news[0]['link'] ?>"><?= $latest_news[0]['title'] ?></a>
+                            <h3 class="h5">
+                                <a class="text-truncate d-block" href="<?= $latest_news[0]['link'] ?>"><?= $latest_news[0]['title'] ?></a>
                             </h3>
                             <p style="-webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;"><?= $latest_news[0]['content'] ?></p>
                         </div>
                     </article>
                 <?php endif; ?>
             </div>
-            <div class="col">
+            <div class="col-lg-7 col-12">
                 <?php if (isset($latest_news[1])): ?>
                     <article class="card border-0 shadow-sm overflow-hidden mb-4">
                         <div class="row g-0">
@@ -420,7 +420,7 @@ $latest_news = get_latest_news();
                                 <a href="<?= $latest_news[1]['link'] ?>" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
                             </div>
                             <div class="col-sm-7">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <div class="d-flex align-items-center mb-3">
                                         <?php if (!empty($latest_news[1]['category'])): ?>
                                             <a href="<?= $latest_news[1]['link'] ?>" class="badge fs-sm text-nav bg-secondary text-decoration-none"><?= $latest_news[1]['category'] ?></a>
@@ -429,8 +429,8 @@ $latest_news = get_latest_news();
                                             <span class="fs-sm text-muted"><?= $latest_news[1]['date'] ?></span>
                                         <?php endif; ?>
                                     </div>
-                                    <h3 class="h5 text-truncate">
-                                        <a href="<?= $latest_news[1]['link'] ?>"><?= $latest_news[1]['title'] ?></a>
+                                    <h3 class="h5">
+                                        <a class="text-truncate d-block" href="<?= $latest_news[1]['link'] ?>"><?= $latest_news[1]['title'] ?></a>
                                     </h3>
                                     <p style="-webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;"><?= $latest_news[1]['content'] ?></p>
                                 </div>
@@ -446,7 +446,7 @@ $latest_news = get_latest_news();
                                 <a href="<?= $latest_news[2]['link'] ?>" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
                             </div>
                             <div class="col-sm-7">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <div class="d-flex align-items-center mb-3">
                                         <?php if (!empty($latest_news[2]['category'])): ?>
                                             <a href="<?= $latest_news[2]['link'] ?>" class="badge fs-sm text-nav bg-secondary text-decoration-none"><?= $latest_news[2]['category'] ?></a>
@@ -455,8 +455,8 @@ $latest_news = get_latest_news();
                                             <span class="fs-sm text-muted"><?= $latest_news[2]['date'] ?></span>
                                         <?php endif; ?>
                                     </div>
-                                    <h3 class="h5 text-truncate">
-                                        <a href="<?= $latest_news[2]['link'] ?>"><?= $latest_news[2]['title'] ?></a>
+                                    <h3 class="h5">
+                                        <a class="text-truncate d-block" href="<?= $latest_news[2]['link'] ?>"><?= $latest_news[2]['title'] ?></a>
                                     </h3>
                                     <p style="-webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;"><?= $latest_news[2]['content'] ?></p>
                                 </div>
