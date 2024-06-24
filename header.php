@@ -37,7 +37,7 @@
             </a>
             <div id="navbarNav" class="offcanvas offcanvas-end">
                 <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title">Menu</h5>
+                    <h5 class="offcanvas-title">Меню</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -72,5 +72,16 @@
                     <label class="form-check-label d-none d-sm-block" for="theme-mode">Темная</label>
                 </div>
             <?php endif; ?>
+            <button
+                    type="button"
+                    class="navbar-toggler"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </header>
