@@ -7,12 +7,12 @@
             <div class="col-md-6 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
                 <div class="mb-md-5 pb-xl-5 mb-4">
 
-                    <div class="d-inline-flex align-items-center position-relative mb-3">
-                        <a href="https://www.youtube.com/watch?v=zPo5ZaH6sW8" class="btn btn-video btn-icon btn-lg flex-shrink-0 me-3 stretched-link" data-bs-toggle="video" aria-label="Play video" data-lg-id="fbf85286-f9c5-4317-a7f4-80f74384219e">
-                            <i class="bx bx-play"></i>
-                        </a>
-                        <h4 class="mb-0">Презентация</h4>
-                    </div>
+<!--                    <div class="d-inline-flex align-items-center position-relative mb-3">-->
+<!--                        <a href="https://www.youtube.com/watch?v=zPo5ZaH6sW8" class="btn btn-video btn-icon btn-lg flex-shrink-0 me-3 stretched-link" data-bs-toggle="video" aria-label="Play video" data-lg-id="fbf85286-f9c5-4317-a7f4-80f74384219e">-->
+<!--                            <i class="bx bx-play"></i>-->
+<!--                        </a>-->
+<!--                        <h4 class="mb-0">Презентация</h4>-->
+<!--                    </div>-->
 
                     <h1 class="display-2 mb-md-5 mb-3 pb-3">
                         Мы <span class="text-gradient-primary">воплощаем</span> Ваши идеи в реальность
