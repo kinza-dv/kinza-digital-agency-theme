@@ -66,6 +66,8 @@
 <script src="<?= get_template_directory_uri() ?>/assets/scripts/lg-video.min.js"></script>
 <script src="<?= get_template_directory_uri() ?>/assets/scripts/imagesloaded.pkgd.min.js"></script>
 <script src="<?= get_template_directory_uri() ?>/assets/scripts/shuffle.min.js"></script>
+<script src="<?= get_template_directory_uri() ?>/assets/scripts/lg-fullscreen.min.js"></script>
+<script src="<?= get_template_directory_uri() ?>/assets/scripts/lg-zoom.min.js"></script>
 
 <!-- Main Theme Script -->
 <script src="<?= get_template_directory_uri() ?>/assets/scripts/theme.min.js"></script>
