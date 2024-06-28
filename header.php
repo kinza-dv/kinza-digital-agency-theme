@@ -1,3 +1,10 @@
+<?php
+
+/**
+ * @var $args
+ */
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -24,7 +31,7 @@
 
 <body <?php body_class(); ?>>
 
-<main class="page-wrapper">
+<main class="<?= ($args['isServices'] ?? false) ? 'page-wrapper position-relative zindex-2' : 'page-wrapper' ?>">
     <header class="<?= $args['headerClass'] ?? 'header navbar navbar-expand-lg position-absolute navbar-sticky' ?>">
         <div class="container px-3">
             <a href="/" class="navbar-brand pe-3">
@@ -50,6 +57,9 @@
                         </li>
                         <li class="nav-item">
                             <a href="<?= esc_url(get_post_type_archive_link('news')) ?>" class="nav-link">Новости</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= get_permalink(get_page_by_path('services')->ID) ?>" class="nav-link">Услуги</a>
                         </li>
                         <li class="nav-item">
                             <a href="<?= get_permalink(get_page_by_path('contacts')->ID) ?>" class="nav-link">Контакты</a>

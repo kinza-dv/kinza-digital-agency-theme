@@ -97,5 +97,4 @@ function register_post_types(): void
         'query_var' => true,
         'show_in_rest' => true,
     ]);
-
 }

@@ -1,9 +1,20 @@
+<?php
 
+/**
+ * @var $args
+ */
+
+?>
 </main>
 
-
 <!-- Footer -->
-<footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
+<footer
+    class="<?= ($args['isServices'] ?? false) ? 'footer bg-dark pt-5 pb-4 pb-lg-5' : 'footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0' ?>"
+    <?= ($args['isServices'] ?? false) ? 'style="margin-top: -150px;" data-bs-theme="dark"' : '' ?>
+>
+    <?php if ($args['isServices'] ?? false) : ?>
+        <div style="height: 158px;"></div>
+    <?php endif; ?>
     <div class="container pt-lg-4">
         <div class="row pb-5">
             <div class="col-md-2 col-12">
@@ -20,6 +31,8 @@
                             <ul class="nav flex-column pb-lg-1 mb-lg-3">
                                 <li class="nav-item"><a href="/" class="nav-link d-inline-block px-0 pt-1 pb-2">Главная</a></li>
                                 <li class="nav-item"><a href="<?= esc_url(get_post_type_archive_link('projects')) ?>" class="nav-link d-inline-block px-0 pt-1 pb-2">Проекты</a></li>
+                                <li class="nav-item"><a href="<?= esc_url(get_post_type_archive_link('news')) ?>" class="nav-link d-inline-block px-0 pt-1 pb-2">Новости</a></li>
+                                <li class="nav-item"><a href="<?= get_permalink(get_page_by_path('services')->ID) ?>" class="nav-link d-inline-block px-0 pt-1 pb-2">Услуги</a></li>
                                 <li class="nav-item"><a href="<?= get_permalink(get_page_by_path('contacts')->ID) ?>" class="nav-link d-inline-block px-0 pt-1 pb-2">Контакты</a></li>
                             </ul>
                         </div>

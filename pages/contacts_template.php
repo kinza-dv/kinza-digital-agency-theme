@@ -7,6 +7,7 @@
 get_header(null, [
     'headerClass' => 'header navbar navbar-expand-lg navbar-dark position-absolute navbar-sticky',
     'isDarkBg' => true,
+    'isServices' => true
 ]);
 
 ?>
@@ -165,4 +166,8 @@ get_header(null, [
             </div>
         </div>
     </section>
-<?php get_footer(); ?>
+
+<div class="py-5"></div>
+<?= do_shortcode('[feedback_form]') ?>
+
+<?php get_footer(null, ['isServices' => true]); ?>

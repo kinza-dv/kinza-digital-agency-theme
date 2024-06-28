@@ -6,12 +6,15 @@ add_theme_support('title-tag');
 
 add_filter('show_admin_bar', '__return_false'); //Hide adminbar
 
+require_once(__DIR__ . '/inc/activation-hooks.php');
+require_once(__DIR__ . '/inc/admin.php');
 require_once(__DIR__ . '/inc/carbon-fields.php');
 require_once(__DIR__ . '/inc/generated-blocks.php');
 require_once(__DIR__ . '/inc/ajax.php');
 require_once(__DIR__ . '/inc/post-types.php');
 require_once(__DIR__ . '/inc/libs.php');
 require_once(__DIR__ . '/inc/duplicate.php');
+require_once(__DIR__ . '/inc/shortcodes.php');
 
 add_action('after_setup_theme', 'init_autoload');
 function init_autoload()
