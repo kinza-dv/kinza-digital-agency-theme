@@ -94,7 +94,7 @@ $post_url = get_permalink();
 <section class="container mb-5 pt-4 pb-2 py-mg-4">
     <div class="row gy-4">
         <div class="col-lg-9">
-            <?= $content ?>
+            <?php the_content(); ?>
         </div>
 
         <div class="col-lg-3 position-relative">

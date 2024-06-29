@@ -90,16 +90,16 @@ function handle_feedback_submission() {
 
         $wpdb->insert(
             $table_name,
-            array(
+            [
                 'service' => $service,
                 'name' => $name,
                 'email' => $email,
                 'message' => $message,
                 'is_read' => 0
-            )
+            ]
         );
 
-        $redirect_url = add_query_arg(array('feedback_sent' => 'true'));
+        $redirect_url = add_query_arg(['feedback_sent' => 'true']);
 
         wp_redirect($redirect_url);
         exit;
