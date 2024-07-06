@@ -26,86 +26,54 @@ get_header(
         </ol>
     </nav>
 
-
-    <!-- Page title + Services grid -->
     <section class="container pb-2 pb-md-4 pb-lg-5 mb-3">
         <h1 class="pb-4">Услуги</h1>
         <div class="row row-cols-1 row-cols-md-2">
 
-            <!-- Item -->
             <div class="col py-4 my-2 my-sm-3">
                 <div class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
                     <div class="card-body pt-3">
                         <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
                             <img src="<?= get_template_directory_uri() ?>/assets/images/services/cms.svg" class="d-block m-1" width="40" alt="Icon">
                         </div>
-                        <h2 class="h4 d-inline-flex align-items-center">Разработка программного обеспечения</h2>
-                        <p class="fs-sm text-body mb-0">Мы создаем программные решения, адаптированные под уникальные потребности вашего бизнеса. Наши специалисты разрабатывают высококачественные продукты, которые помогут вам автоматизировать процессы и повысить эффективность.</p>
+                        <h2 class="h4 d-inline-flex align-items-center">Разработка программного обеспечения в Хабаровске</h2>
+                        <p class="fs-sm text-body mb-0">Наша IT-компания из Хабаровска специализируется на создании высококачественных программных решений, адаптированных под уникальные потребности вашего бизнеса. Мы предлагаем полный цикл разработки ПО, от идеи до реализации, чтобы помочь вам автоматизировать процессы и повысить эффективность работы.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Item -->
-            <div class="col py-4 my-2 my-sm-3">
-                <div class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
-                    <div class="card-body pt-3">
-                        <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
-                            <img src="<?= get_template_directory_uri() ?>/assets/images/services/rocket.svg" class="d-block m-1" width="40" alt="Icon">
-                        </div>
-                        <h2 class="h4 d-inline-flex align-items-center">Интеграция программного обеспечения</h2>
-                        <p class="fs-sm text-body mb-0">Наши эксперты помогут вам интегрировать новые программные решения с уже существующими системами, обеспечивая их бесперебойную работу и совместимость. Мы гарантируем оптимизацию бизнес-процессов и улучшение производительности.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item -->
             <div class="col py-4 my-2 my-sm-3">
                 <div class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
                     <div class="card-body pt-3">
                         <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
                             <img src="<?= get_template_directory_uri() ?>/assets/images/services/mobile-app.svg" class="d-block m-1" width="40" alt="Icon">
                         </div>
-                        <h2 class="h4 d-inline-flex align-items-center">Разработка мобильных приложений</h2>
-                        <p class="fs-sm text-body mb-0">Мы создаем функциональные и удобные мобильные приложения, которые удовлетворят потребности ваших клиентов. Наши решения помогут вам оставаться на связи с аудиторией и предлагать современные услуги на мобильных платформах.</p>
+                        <h2 class="h4 d-inline-flex align-items-center">Разработка мобильных приложений для бизнеса</h2>
+                        <p class="fs-sm text-body mb-0">Мы разрабатываем функциональные и удобные мобильные приложения для платформ iOS и Android, которые удовлетворят потребности ваших клиентов и помогут вашему бизнесу оставаться на связи с аудиторией. Наши решения включают в себя передовые технологии и интуитивно понятный дизайн, обеспечивая превосходный пользовательский опыт.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Item -->
+            <div class="col py-4 my-2 my-sm-3">
+                <div class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+                    <div class="card-body pt-3">
+                        <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                            <img src="<?= get_template_directory_uri() ?>/assets/images/services/rocket.svg" class="d-block m-1" width="40" alt="Icon">
+                        </div>
+                        <h2 class="h4 d-inline-flex align-items-center">Контекстная реклама для увеличения продаж</h2>
+                        <p class="fs-sm text-body mb-0">Наши эксперты по контекстной рекламе помогут вам привлечь целевую аудиторию и увеличить продажи. Мы создаем и управляем рекламными кампаниями в Google Ads и других платформах, обеспечивая максимальную отдачу от ваших инвестиций и достижение ваших бизнес-целей.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="col py-4 my-2 my-sm-3">
                 <div class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
                     <div class="card-body pt-3">
                         <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
                             <img src="<?= get_template_directory_uri() ?>/assets/images/services/analytics.svg" class="d-block m-1" width="40" alt="Icon">
                         </div>
-                        <h2 class="h4 d-inline-flex align-items-center">Бизнес-аналитика</h2>
-                        <p class="fs-sm text-body mb-0">Мы предоставляем аналитические услуги, которые помогут вам принимать обоснованные бизнес-решения. Наши инструменты и методы анализа данных позволят вам лучше понимать рынок, прогнозировать тенденции и повышать конкурентоспособность.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item -->
-            <div class="col py-4 my-2 my-sm-3">
-                <div class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
-                    <div class="card-body pt-3">
-                        <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
-                            <img src="<?= get_template_directory_uri() ?>/assets/images/services/web-search.svg" class="d-block m-1" width="40" alt="Icon">
-                        </div>
-                        <h2 class="h4 d-inline-flex align-items-center">Тестирование программного обеспечения</h2>
-                        <p class="fs-sm text-body mb-0">Наши услуги по тестированию обеспечивают высокое качество и надежность ваших программных продуктов. Мы проводим всесторонние проверки и тесты, чтобы выявить и устранить возможные ошибки до запуска.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item -->
-            <div class="col py-4 my-2 my-sm-3">
-                <div class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
-                    <div class="card-body pt-3">
-                        <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
-                            <img src="<?= get_template_directory_uri() ?>/assets/images/services/timer.svg" class="d-block m-1" width="40" alt="Icon">
-                        </div>
-                        <h2 class="h4 d-inline-flex align-items-center">Управление проектами</h2>
-                        <p class="fs-sm text-body mb-0">Мы предлагаем профессиональные услуги по управлению проектами, которые помогут вам эффективно организовать работу команды, контролировать сроки и бюджет. Наши методы и инструменты обеспечат успешную реализацию ваших проектов.</p>
+                        <h2 class="h4 d-inline-flex align-items-center">Веб-разработка и создание сайтов</h2>
+                        <p class="fs-sm text-body mb-0">Мы предлагаем полный спектр услуг по разработке сайтов, начиная от корпоративных и промо-сайтов до сложных веб-приложений и интернет-магазинов. Наши специалисты обеспечивают современный дизайн, удобную навигацию и оптимизацию под поисковые системы, чтобы ваш сайт привлекал больше посетителей и увеличивал конверсии.</p>
                     </div>
                 </div>
             </div>

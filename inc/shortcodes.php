@@ -41,11 +41,9 @@ function feedback_form_shortcode(): bool|string
                                 <select id="service" name="service" class="form-select form-select-lg" required="">
                                     <option value="" selected="" disabled="">Выберите интересующую вас услугу</option>
                                     <option value="Разработка программного обеспечения">Разработка программного обеспечения</option>
-                                    <option value="Интеграция программного обеспечения">Интеграция программного обеспечения</option>
                                     <option value="Разработка мобильных приложений">Разработка мобильных приложений</option>
-                                    <option value="Бизнес-аналитика">Бизнес-аналитика</option>
-                                    <option value="Тестирование программного обеспечения">Тестирование программного обеспечения</option>
-                                    <option value="Управление проектами">Управление проектами</option>
+                                    <option value="Контекстная реклама">Контекстная реклама</option>
+                                    <option value="Веб-разработка и создание сайтов">Веб-разработка и создание сайтов</option>
                                 </select>
                                 <div class="invalid-feedback">Пожалуйста, выберите услугу!</div>
                             </div>
