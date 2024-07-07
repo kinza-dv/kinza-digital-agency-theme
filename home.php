@@ -27,7 +27,7 @@
                     <a href="#benefits" data-scroll="" data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3" aria-label="Scroll for more">
                         <i class="bx bx-chevron-down"></i>
                     </a>
-                    <span class="fs-sm">Изучить больше</span>
+                    <span class="fs-sm">Узнать</span>
                 </div>
             </div>
 
@@ -61,8 +61,6 @@
           }
         }'>
         <div class="swiper-wrapper" id="swiper-wrapper-d108a94f9939f4e21" aria-live="polite" style="transform: translate3d(0, 0, 0);">
-
-            <!-- Item -->
             <div class="swiper-slide border-end-lg px-2 swiper-slide-active" style="width: 432px;" role=group aria-label="1 / 3">
                 <div class="text-center">
                     <img src="<?= get_template_directory_uri() ?>/assets/svg/idea.svg" width="48" alt="Bulb icon" class="d-block mb-4 mx-auto">
@@ -70,8 +68,6 @@
                     <p class="mx-auto" style="max-width: 336px;">Мы воплощаем уникальные идеи в инновационные цифровые продукты.</p>
                 </div>
             </div>
-
-            <!-- Item -->
             <div class="swiper-slide border-end-lg px-2 swiper-slide-next" style="width: 432px;" role="group" aria-label="2 / 3">
                 <div class="text-center">
                     <img src="<?= get_template_directory_uri() ?>/assets/svg/award.svg" width="48" alt="Award icon" class="d-block mb-4 mx-auto">
@@ -79,8 +75,6 @@
                     <p class="mx-auto" style="max-width: 336px;">Наши проекты отмечены престижными наградами в области IT.</p>
                 </div>
             </div>
-
-            <!-- Item -->
             <div class="swiper-slide px-2" role="group" aria-label="3 / 3" style="width: 432px;">
                 <div class="text-center">
                     <img src="<?= get_template_directory_uri() ?>/assets/svg/team.svg" width="48" alt="Team icon" class="d-block mb-4 mx-auto">
@@ -90,7 +84,6 @@
             </div>
         </div>
 
-        <!-- Pagination (bullets) -->
         <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock" id="swiper-benefits-pagination"></div>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </div>
