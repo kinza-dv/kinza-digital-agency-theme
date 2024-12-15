@@ -86,3 +86,6 @@
   transition-property: transform, opacity;
   height: calc(350px - var(--si-gutter-x) * 0.5);
 }
+.wp-block-image {
+  border-radius: 6px;
+}
