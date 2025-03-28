@@ -470,7 +470,7 @@ $latest_news = get_latest_news();
             <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(<?= get_template_directory_uri() ?>/assets/images/contact-bg.png);">
                 <div class="py-md-5 py-4 text-center">
                     <h3 class="h4 fw-normal text-light opacity-75">Хотите работать с нами? Давайте поговорим</h3>
-                    <a href="mailto:kinza-agency@ya.ru" class="display-6 text-light">kinza-agency@ya.ru</a>
+                    <a href="mailto:<?= carbon_get_theme_option('contact_email') ?>" class="display-6 text-light"><?= carbon_get_theme_option('contact_email') ?></a>
                     <div class="pt-md-5 pt-4 pb-md-2">
                         <a
                             href="<?= get_permalink(get_page_by_path('contacts')->ID) ?>"

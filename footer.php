@@ -41,13 +41,22 @@
                         <h6 class="mb-2">Социальные сети</h6>
                         <div id="social-links" data-bs-parent="#footer-links">
                             <ul class="nav flex-column mb-2 mb-lg-0">
-                                <li class="nav-item"><a href="https://vk.com/club224388965" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">ВКонтакте</a></li>
+                                <?php if (carbon_get_theme_option('contact_vk')): ?>
+                                <li class="nav-item">
+                                    <a href="<?= carbon_get_theme_option('contact_vk') ?>" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">ВКонтакте</a>
+                                </li>
+                                <?php endif; ?>
+                                <?php if (carbon_get_theme_option('contact_telegram')): ?>
+                                <li class="nav-item">
+                                    <a href="<?= carbon_get_theme_option('contact_telegram') ?>" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">Telegram</a>
+                                </li>
+                                <?php endif; ?>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 pt-2 pt-lg-0">
                         <h6 class="mb-2">Связаться с нами</h6>
-                        <a href="mailto:kinza-agency@ya.ru" class="nav-link text-decoration-underline fw-medium">kinza-agency@ya.ru</a>
+                        <a href="mailto:<?= carbon_get_theme_option('contact_email') ?>" class="nav-link text-decoration-underline fw-medium"><?= carbon_get_theme_option('contact_email') ?></a>
                     </div>
                 </div>
             </div>

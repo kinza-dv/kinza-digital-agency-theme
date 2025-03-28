@@ -11,26 +11,34 @@ function feedback_form_shortcode(): bool|string
                     <p class="pb-2 pb-md-4 pb-lg-5">Есть проект на примете? Чтобы запросить ценовое предложение, свяжитесь с нами напрямую или заполните форму и сообщите нам, чем мы можем помочь.</p>
                     <h3 class="mb-lg-4">Контактная информация</h3>
                     <ul class="list-unstyled pb-3 pb-md-4 pb-lg-5 mb-2">
+                        <?php if (carbon_get_theme_option('contact_phone')): ?>
                         <li class="mb-2">
-                            <a href="tel:79143183481" class="nav-link d-flex align-items-center p-0">
+                            <a href="tel:<?= preg_replace("/[^0-9]/", '', carbon_get_theme_option('contact_phone')) ?>" class="nav-link d-flex align-items-center p-0">
                                 <i class="bx bx-phone-call fs-xl text-primary me-2"></i>
-                                +7 (914)&nbsp;318‑34-81
+                                <?= carbon_get_theme_option('contact_phone') ?>
                             </a>
                         </li>
+                        <?php endif; ?>
+                        <?php if (carbon_get_theme_option('contact_email')): ?>
                         <li class="mb-2">
-                            <a href="mailto:kinza-agency@ya.ru" class="nav-link d-flex align-items-center p-0">
+                            <a href="mailto:<?= carbon_get_theme_option('contact_email') ?>" class="nav-link d-flex align-items-center p-0">
                                 <i class="bx bx-envelope fs-xl text-primary me-2"></i>
-                                kinza-agency@ya.ru
+                                <?= carbon_get_theme_option('contact_email') ?>
                             </a>
                         </li>
+                        <?php endif; ?>
                     </ul>
                     <div class="d-flex">
-                        <a href="https://vk.com/club224388965" class="btn btn-icon btn-outline-secondary btn-facebook me-3" aria-label="VK">
-                            <i class="bx bxl-vk"></i>
-                        </a>
-                        <a href="https://t.me/mikekarpuxin" class="btn btn-icon btn-outline-secondary btn-twitter me-3" aria-label="Telegram">
-                            <i class="bx bxl-telegram"></i>
-                        </a>
+                        <?php if (carbon_get_theme_option('contact_vk')): ?>
+                            <a href="<?= carbon_get_theme_option('contact_vk') ?>" class="btn btn-icon btn-outline-secondary btn-facebook me-3" aria-label="VK">
+                                <i class="bx bxl-vk"></i>
+                            </a>
+                        <?php endif; ?>
+                        <?php if (carbon_get_theme_option('contact_telegram')): ?>
+                            <a href="<?= carbon_get_theme_option('contact_telegram') ?>" class="btn btn-icon btn-outline-secondary btn-twitter me-3" aria-label="Telegram">
+                                <i class="bx bxl-telegram"></i>
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 offset-xl-1">

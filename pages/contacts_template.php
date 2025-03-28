@@ -32,12 +32,16 @@ get_header(null, [
                     <h1 class="mb-4">Связаться</h1>
                     <p class="text-body fs-lg pb-3 mb-3">У вас есть на примете проект?<br>Чтобы запросить ценовое предложение, свяжитесь с нами напрямую или заполните форму и сообщите, чем мы можем помочь.</p>
                     <div class="d-flex justify-content-center">
-                        <a href="https://vk.com/club224388965" class="btn btn-icon btn-secondary btn-facebook rounded-circle mx-2" aria-label="ВКонтакте" target="_blank">
+                        <?php if (carbon_get_theme_option('contact_vk')): ?>
+                        <a href="<?= carbon_get_theme_option('contact_vk') ?>" class="btn btn-icon btn-secondary btn-facebook rounded-circle mx-2" aria-label="ВКонтакте" target="_blank">
                             <i class="bx bxl-vk"></i>
                         </a>
-                        <a href="https://t.me/mikekarpuxin" class="btn btn-icon btn-secondary btn-facebook rounded-circle mx-2" aria-label="Telegram" target="_blank">
+                        <?php endif; ?>
+                        <?php if (carbon_get_theme_option('contact_telegram')): ?>
+                        <a href="<?= carbon_get_theme_option('contact_telegram') ?>" class="btn btn-icon btn-secondary btn-facebook rounded-circle mx-2" aria-label="Telegram" target="_blank">
                             <i class="bx bxl-telegram"></i>
                         </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -63,7 +67,7 @@ get_header(null, [
                             <p class="pb-2 pb-sm-3 mb-3">Пожалуйста, не стесняйтесь, напишите нам. Мы ответим как можно скорее.</p>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="mailto:kinza-agency@ya.ru" class="btn btn-lg btn-primary">Отправить письмо</a>
+                            <a href="mailto:<?= carbon_get_theme_option('contact_email') ?>" class="btn btn-lg btn-primary">Отправить письмо</a>
                         </div>
                     </div>
                     <div class="vr text-border d-none d-sm-inline-block m-4"></div>
@@ -75,7 +79,11 @@ get_header(null, [
                             <p class="pb-2 pb-sm-3 mb-3">Если вам нужна немедленная помощь, звоните нам в любое время.</p>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="tel:79143183481" class="btn btn-lg btn-primary">Позвоните&nbsp;нам</a>
+                            <?php if (carbon_get_theme_option('contact_phone')): ?>
+                            <a href="<?= 'tel:' . preg_replace("/[^0-9]/", '', carbon_get_theme_option('contact_phone')) ?>" class="btn btn-lg btn-primary">Позвоните&nbsp;нам</a>
+                            <?php else: ?>
+                            <a href="<?= carbon_get_theme_option('contact_telegram') ?>" class="btn btn-lg btn-primary">Позвоните&nbsp;нам</a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
