@@ -1,0 +1,14 @@
+:root {
+    --theme-purple-1: #6366f1;
+    --theme-purple-2: #8b5cf6;
+    --theme-purple-3: #d946ef;
+    --theme-gradient: linear-gradient(to right, var(--theme-purple-1), var(--theme-purple-2), var(--theme-purple-3));
+}
+
+.wp-list-table.feedbacks tbody tr:has(td.is_read input:not(:checked)) {
+    background: var(--theme-purple-1);
+}
+
+.wp-list-table.feedbacks tbody tr:has(td.is_read input:not(:checked)) td {
+    color: white !important;
+}
